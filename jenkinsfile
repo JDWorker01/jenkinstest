@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    stages {
+        stage("init") {
+            steps {
+                script {
+                    println "欢迎来到Anthony的Pipeline教程。"
+                }
+            }
+        }
+        stage("Test Method") {
+            steps {
+                script {
+                    println "欢迎来到Anthony的Pipeline教程2"
+                }
+            }
+        }
+    }
+}
