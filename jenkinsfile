@@ -11,6 +11,7 @@ pipeline {
         stage("Test Method") {
             steps {
                 script {
+                    println env.WORKSPACE
                     println "欢迎来到Anthony的Pipeline教程2"
                 }
             }
