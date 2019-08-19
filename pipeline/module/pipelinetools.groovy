@@ -17,3 +17,5 @@ def read_json(jsonPath){
     def jsonObject = jsonSlurper.parseText(new File(jsonPath).getText("UTF-8"))
     println("name=${jsonObject.GENDER}")
 }
+
+return this;
