@@ -13,7 +13,7 @@ pipeline {
                 script {
                     model_test = load env.WORKSPACE + "/pipeline/module/pipelinetools.groovy"
                     model_test.testFile()
-                    model_test.readJson()
+                    model_test.readJson("kk")
                     println "欢迎来到Anthony的Pipeline教程。"
                 }
             }
