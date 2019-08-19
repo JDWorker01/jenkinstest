@@ -19,6 +19,9 @@ pipeline {
         stage("Test Method") {
             steps {
                 script {
+                    properties_file = env.WORKSPACE + "/testdata/test_json.json"
+                    println(properties_file)
+                    model_test.read_json(properties_file)
                     println "欢迎来到Anthony的Pipeline教程2"
                 }
             }
