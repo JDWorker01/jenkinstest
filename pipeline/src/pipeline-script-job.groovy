@@ -11,8 +11,9 @@ pipeline {
         stage("init") {
             steps {
                 script {
-                    def model_test = load env.WORKSPACE + "/pipeline/module/pipelinetools.groovy"
+                    model_test = load env.WORKSPACE + "/pipeline/module/pipelinetools.groovy"
                     model_test.testFile()
+                    model_test.readJson()
                     println "欢迎来到Anthony的Pipeline教程。"
                 }
             }
