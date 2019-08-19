@@ -13,6 +13,7 @@ def testFile(){
 }
 
 def read_json(jsonPath){
+    println("jsonPath:"+jsonPath)
     def jsonSlurper = new JsonSlurper()
     def jsonObject = jsonSlurper.parseText(new File(jsonPath).getText("UTF-8"))
     println("name=${jsonObject.GENDER}")
