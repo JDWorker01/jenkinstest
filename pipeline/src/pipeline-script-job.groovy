@@ -11,7 +11,8 @@ pipeline {
         stage("init") {
             steps {
                 script {
-                    model_test = load env.WORKSPACE + "/pipeline/module/pipelinetools.groovy"
+                    def model_test = load env.WORKSPACE + "/pipeline/module/pipelinetools.groovy"
+                    model_test.testFile()
                     println "欢迎来到Anthony的Pipeline教程。"
                 }
             }
@@ -21,7 +22,6 @@ pipeline {
                 script {
                     properties_file = env.WORKSPACE + "/testdata/test_json.json"
                     println(properties_file)
-                    model_test.read_json(properties_file)
                     println "欢迎来到Anthony的Pipeline教程2"
                 }
             }
