@@ -22,6 +22,7 @@ pipeline {
             steps {
                 script {
                     properties_file = env.WORKSPACE + "/testdata/test_json.json"
+                    model_test.readJson(properties_file)
                     println(properties_file)
                     println "欢迎来到Anthony的Pipeline教程2"
                 }
